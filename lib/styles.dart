@@ -18,7 +18,7 @@ Image shopIcon = Image.asset("assets/images/Shop_Icon.png", height: 45.0, color:
 Image gamesIcon = Image.asset("assets/images/Games_Icon.png", height: 45.0, color: darkGrey);
 
 Text apptitle(String text) {
-  return new Text(text, style: new TextStyle(color: darkGrey),);
+  return new Text(text, style: new TextStyle(color: darkGrey, fontFamily: "Quarca", fontSize: 27.0),);
 } 
 
 

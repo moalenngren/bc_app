@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bc_app/styles.dart';
+import 'package:bc_app/main.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
@@ -14,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
 
-    //if ()
+
 
     return new Scaffold(
       appBar: new AppBar(

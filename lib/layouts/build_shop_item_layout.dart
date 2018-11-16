@@ -27,6 +27,7 @@ Container buildShopItemLayout(ShopItem item, Function addToCart) {
                 )))
       ]);
 
+  //CART BUTTON
   GestureDetector roundCartButton = new GestureDetector(
       onTap: () {
         print("TAPPED!");
@@ -46,6 +47,7 @@ Container buildShopItemLayout(ShopItem item, Function addToCart) {
                 color: darkGrey,
               ))));
 
+  //ADD TEXT + BUTTON
   Row addRow = Row(
     mainAxisAlignment: MainAxisAlignment.end,
     children: <Widget>[
@@ -58,6 +60,7 @@ Container buildShopItemLayout(ShopItem item, Function addToCart) {
     ],
   );
 
+  //IMAGE
   GestureDetector image = GestureDetector(
     onTap: (){
       //imagePopUp;

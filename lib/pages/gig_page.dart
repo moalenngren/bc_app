@@ -38,7 +38,7 @@ class _GigPageState extends State<GigPage> {
 
     //UPCOMING GIGS
     widgetList.add(headerText("UPCOMING GIGS"));
-    if (widget.upcomingGigList != null || widget.upcomingGigList.length > 0) {
+    if (widget.upcomingGigList != null && widget.upcomingGigList.length > 0) {
       print("Upcoming gigs are loaded");
       print("Length of gigs in upcoming giglist is: " +
           widget.upcomingGigList.length.toString());

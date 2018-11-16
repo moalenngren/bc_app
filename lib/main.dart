@@ -7,6 +7,19 @@ import 'package:bc_app/pages/shop_page.dart';
 import 'package:bc_app/pages/game_page.dart';
 import 'package:bc_app/pages/home_page.dart';
 import 'package:bc_app/api.dart';
+//import 'package:intl/intl.dart';
+
+class User {
+  String userName;
+  int xp;
+  int points;
+  /*int concertsSeen;
+  int gamesPlayed;
+  bool didReadABoutAllMembers;
+  bool didShareGameResult;*/
+
+  User(this.userName, this.xp, this.points);
+}
 
 void main() => runApp(new MyApp());
 
@@ -23,6 +36,8 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.black,//Icons text when chosen & numberpicker text
           textTheme: Theme.of(context).textTheme.apply(
                 displayColor: darkGrey, //Icons text when NOT chosen
+                //fontFamily: "Quarca",
+                
               )
               ),
       home: new LogInPage(title: 'Log In'),

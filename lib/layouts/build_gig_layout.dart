@@ -29,8 +29,8 @@ Container buildGigLayout(Gig gig) {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
            children: <Widget>[
-            Text(gig.venue, style: TextStyle(fontFamily: "Quarca", fontSize: 22.0), textAlign: TextAlign.left,),
-            Text(gig.city + ", " + gig.country, style: TextStyle(fontFamily: "Quarca", fontSize: 27.0), textAlign: TextAlign.left,)
+            Text(gig.venue, style: TextStyle(/*fontFamily: "Quarca",*/ fontSize: 22.0), textAlign: TextAlign.left,),
+            Text(gig.city + ", " + gig.country, style: TextStyle(/*fontFamily: "Quarca",*/ fontSize: 27.0), textAlign: TextAlign.left,)
           ],
         )),
         ]
@@ -62,8 +62,8 @@ Container buildPastGigLayout(Gig gig) {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
            children: <Widget>[
-            Text(gig.venue, style: TextStyle(fontFamily: "Quarca", fontSize: 22.0, color: lightGrey), textAlign: TextAlign.left,),
-            Text(gig.city + ", " + gig.country, style: TextStyle(fontFamily: "Quarca", fontSize: 27.0, color: lightGrey), textAlign: TextAlign.left,)
+            Text(gig.venue, style: TextStyle(/*fontFamily: "Quarca",*/ fontSize: 22.0, color: lightGrey), textAlign: TextAlign.left,),
+            Text(gig.city + ", " + gig.country, style: TextStyle(/*fontFamily: "Quarca",*/ fontSize: 27.0, color: lightGrey), textAlign: TextAlign.left,)
           ],
         )),
         ]

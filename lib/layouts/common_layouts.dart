@@ -1,6 +1,7 @@
 import 'package:bc_app/styles.dart';
 import 'package:flutter/material.dart';
 
+//HEADER
 Container headerText(String text) {
   return Container(
     child: Column(
@@ -22,6 +23,7 @@ Container headerText(String text) {
   );
 }
 
+//SUBHEADER
 Container subHeaderText(String text) {
   return Container(
       child:
@@ -29,6 +31,7 @@ Container subHeaderText(String text) {
   );
 }
 
+//SMALL LINE
 Container smallLine({Color color = Colors.white, double height = 1.0, double margin = 10.0}) {
   return Container(
     margin: EdgeInsets.symmetric(vertical: margin),
