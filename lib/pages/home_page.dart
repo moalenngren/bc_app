@@ -1,6 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:bc_app/styles.dart';
-import 'package:bc_app/main.dart';
+
+class User {
+  String userName;
+  int xp;
+  int points;
+  /*int concertsSeen;
+  int gamesPlayed;
+  bool didReadABoutAllMembers;
+  bool didShareGameResult;*/
+
+  User(this.userName, this.xp, this.points);
+}
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);

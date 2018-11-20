@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:bc_app/styles.dart';
-import 'package:bc_app/api.dart';
 import 'package:bc_app/layouts/build_gig_layout.dart';
 import 'package:bc_app/layouts/common_layouts.dart';
 

@@ -56,8 +56,8 @@ List<Gem> allGems = [
 
 List<Game> allGames = [
   new Game("Hardrock Alchemist", "assets/images/alchemist_game.png", []),
-  new Game("Quiz", "assets/images/quiz_game.jpg", []),
-  new Game("Flappy Fan", "assets/images/flappy_game.jpg", []),
+  new Game("Quiz", "assets/images/quiz_game.png", []),
+  new Game("Flappy Fan", "assets/images/flappy_game.png", []),
 ];
 
   @override

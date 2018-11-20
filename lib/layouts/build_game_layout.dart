@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:bc_app/styles.dart';
-import 'package:bc_app/layouts/common_layouts.dart';
 import 'package:bc_app/pages/game_page.dart';
 
 Container buildGameLayout(Game game) {
@@ -8,7 +6,7 @@ Container buildGameLayout(Game game) {
   return 
   Container(
     height: 140.0,
-    margin: EdgeInsets.symmetric(vertical: 20.0),
+    margin: EdgeInsets.only(bottom: 20.0),
     child:
     GestureDetector(
     onTap: (){

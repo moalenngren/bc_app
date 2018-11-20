@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:bc_app/styles.dart';
-import 'package:bc_app/layouts/common_layouts.dart';
 import 'package:bc_app/pages/shop_page.dart';
 import 'package:numberpicker/numberpicker.dart';
 

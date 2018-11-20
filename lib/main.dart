@@ -1,25 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:bc_app/api.dart';
 import 'package:bc_app/styles.dart';
-import 'package:bc_app/pages/start_page.dart';
 import 'package:bc_app/pages/gallery_page.dart';
 import 'package:bc_app/pages/gig_page.dart';
 import 'package:bc_app/pages/shop_page.dart';
 import 'package:bc_app/pages/game_page.dart';
 import 'package:bc_app/pages/home_page.dart';
-import 'package:bc_app/api.dart';
-//import 'package:intl/intl.dart';
-
-class User {
-  String userName;
-  int xp;
-  int points;
-  /*int concertsSeen;
-  int gamesPlayed;
-  bool didReadABoutAllMembers;
-  bool didShareGameResult;*/
-
-  User(this.userName, this.xp, this.points);
-}
 
 void main() => runApp(new MyApp());
 
@@ -28,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Browsing Collection App',
+      title: "Browsing Collection App",
       theme: new ThemeData(
           canvasColor: bottomNavBarColor, //bottom nav bar
           //brightness: Brightness.light, //Brightness of icon text
@@ -165,7 +151,7 @@ class _LogInPageState extends State<LogInPage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => StartPage()),
+                  MaterialPageRoute(builder: (context) => HomePage()),
                 );
               },
               child: new Icon(Icons.arrow_right),

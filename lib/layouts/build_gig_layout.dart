@@ -1,6 +1,7 @@
 import 'package:bc_app/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:bc_app/pages/gig_page.dart';
+import 'package:intl/intl.dart';
 
 Container buildGigLayout(Gig gig) {
   return Container(
@@ -19,8 +20,10 @@ Container buildGigLayout(Gig gig) {
             child: 
         Column(
           children: <Widget>[
-            Text("DEC", style: TextStyle(fontFamily: "Quarca", fontSize: 22.0),),
-            Text("07", style: TextStyle(fontFamily: "Quarca", fontSize: 27.0, fontWeight: FontWeight.bold))
+            Text(DateFormat('MMM')
+                    .format(DateTime.parse(gig.date)).toUpperCase(), style: TextStyle(fontFamily: "Quarca", fontSize: 22.0),),
+            Text(DateFormat('dd')
+                    .format(DateTime.parse(gig.date)), style: TextStyle(fontFamily: "Quarca", fontSize: 27.0, fontWeight: FontWeight.bold))
           ],
         ),),
          Container(
@@ -52,8 +55,10 @@ Container buildPastGigLayout(Gig gig) {
             child: 
         Column(
           children: <Widget>[
-            Text("DEC", style: TextStyle(fontFamily: "Quarca", fontSize: 22.0),),
-            Text("07", style: TextStyle(fontFamily: "Quarca", fontSize: 27.0, fontWeight: FontWeight.bold))
+            Text(DateFormat('MMM')
+                    .format(DateTime.parse(gig.date)).toUpperCase(), style: TextStyle(fontFamily: "Quarca", fontSize: 22.0),),
+            Text(DateFormat('dd')
+                    .format(DateTime.parse(gig.date)), style: TextStyle(fontFamily: "Quarca", fontSize: 27.0, fontWeight: FontWeight.bold))
           ],
         ),),
          Container(

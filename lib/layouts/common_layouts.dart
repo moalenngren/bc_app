@@ -26,6 +26,7 @@ Container headerText(String text) {
 //SUBHEADER
 Container subHeaderText(String text) {
   return Container(
+    margin: EdgeInsets.only(bottom: 20.0),
       child:
          Text(text, style: TextStyle(color: lightGrey, fontSize: 27.0, fontFamily: "Quarca"), textAlign: TextAlign.center,),
   );

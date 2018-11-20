@@ -14,10 +14,11 @@ environment:
 
 dependencies:
   numberpicker: ^0.1.7
+  http: ^0.12.0
+  intl: ^0.15.7
   flutter:
     sdk: flutter
-
-  http: ^0.12.0
+  
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -54,7 +55,9 @@ flutter:
     - assets/images/white_tshirt.png
     - assets/images/white_bag.png 
     - assets/images/dont_want_to_dance.jpeg
-
+    - assets/images/alchemist_game.png 
+    - assets/images/quiz_game.png
+    - assets/images/flappy_game.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
