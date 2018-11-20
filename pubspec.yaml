@@ -14,7 +14,7 @@ environment:
 
 dependencies:
   numberpicker: ^0.1.7
-  http: ^0.12.0
+  http: ^0.11.3+17
   intl: ^0.15.7
   flutter:
     sdk: flutter
@@ -59,6 +59,12 @@ flutter:
     - assets/images/quiz_game.png
     - assets/images/flappy_game.png
 
+    - assets/images/profile_placeholder.png
+    - assets/images/biography_icon.png
+    - assets/images/discography_icon.png
+    - assets/images/members_icon.png
+    - assets/images/endorsement_icon.png
+    - assets/images/chat_icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bc_app/styles.dart';
+import 'package:bc_app/layouts/common_layouts.dart';
 
 class GalleryPage extends StatefulWidget {
   GalleryPage({Key key, this.title}) : super(key: key);
@@ -17,7 +18,7 @@ class _GalleryPageState extends State<GalleryPage> {
       appBar: new AppBar(
         title: apptitle("Gallery"),
         backgroundColor: appBarColor,
-      ),
+      actions: appBarIcons(context)),
       body: new Center(
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,

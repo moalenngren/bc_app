@@ -6,6 +6,7 @@ import 'package:bc_app/pages/gig_page.dart';
 import 'package:bc_app/pages/shop_page.dart';
 import 'package:bc_app/pages/game_page.dart';
 import 'package:bc_app/pages/home_page.dart';
+import 'package:bc_app/classes.dart';
 
 void main() => runApp(new MyApp());
 
@@ -44,6 +45,7 @@ class _LogInPageState extends State<LogInPage> {
   int _currentBottomNavIndex = 2; 
   List<Gig> allUpcomingGigInstances = [];
   List<Gig> allPastGigInstances = [];
+  User user = User("bc_fan_93", 0, 0, []); //Get this from real log in
 
  @override
   void initState() {
@@ -98,7 +100,7 @@ class _LogInPageState extends State<LogInPage> {
           upcomingGigList: allUpcomingGigInstances,
           pastGigList: allPastGigInstances),
         GalleryPage(),
-        HomePage(),
+        HomePage(user: user),
         ShopPage(),
         GamePage()
       ];

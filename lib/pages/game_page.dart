@@ -76,7 +76,7 @@ List<Game> allGames = [
       appBar: new AppBar(
         title: apptitle("Games"),
         backgroundColor: appBarColor,
-      ),
+      actions: appBarIcons(context)),
       body: ListView(
         padding: EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
           children: widgetList
