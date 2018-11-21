@@ -93,11 +93,9 @@ GestureDetector smallButton(
       ));
 }
 
-//APP BAR ICONS
-List<Widget> appBarIcons(BuildContext context) {
-  return [
-    //INFORMATION
-    IconButton(
+//APP BAR ICON INFO
+IconButton appBarIconsInfo(BuildContext context) {
+  return IconButton(
       icon: Icon(Icons.info_outline),
       onPressed: () {
         print("You clicked information");
@@ -107,9 +105,12 @@ List<Widget> appBarIcons(BuildContext context) {
         );
       },
       color: darkGrey,
-    ),
-    //SETTINGS
-    IconButton(
+    );
+}
+
+//APP BAR ICON SETTINGS
+IconButton appBarIconsSettings(BuildContext context) {
+  return  IconButton(
       icon: Icon(Icons.settings),
       onPressed: () {
         print("You clicked settings");
@@ -122,9 +123,12 @@ List<Widget> appBarIcons(BuildContext context) {
         );
       },
       color: darkGrey,
-    ),
-    //MY ACCOUNT
-    IconButton(
+    );
+}
+
+//APP BAR ICON PROFILE
+IconButton appBarIconsProfile(BuildContext context) {
+return IconButton(
       icon: Icon(Icons.portrait),
       onPressed: () {
         print("You clicked my profile");
@@ -137,8 +141,7 @@ List<Widget> appBarIcons(BuildContext context) {
         );
       },
       color: darkGrey,
-    ),
-  ];
+    );
 }
 
 String calculateFanStage(User user) {
@@ -150,3 +153,31 @@ String calculateFanStage(User user) {
   if (user.xp >= 400 && user.xp < 150) return "Crazy Stalker";
   return "Casual Follower";
 }
+
+      Container fanStageLabel(/*User user*/String string) { //TODO - use user
+        return Container(
+        margin: EdgeInsets.symmetric(vertical: 5.0),
+        child: Row(
+      children: <Widget>[
+        Expanded(
+            child: Container(
+          color: lightGrey,
+          height: 1.0,
+        )),
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 10.0),
+          child: Text(
+            string, //TODO - send real user data with calculateFanStage(user)
+            style: TextStyle(
+                color: lightGrey, fontSize: 25.0, fontFamily: "Quarca"),
+            textAlign: TextAlign.center,
+          ),
+        ),
+        Expanded(
+            child: Container(
+          color: lightGrey,
+          height: 1.0,
+        )),
+      ],
+    ));
+      }

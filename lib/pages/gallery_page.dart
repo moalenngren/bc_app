@@ -18,7 +18,7 @@ class _GalleryPageState extends State<GalleryPage> {
       appBar: new AppBar(
         title: apptitle("Gallery"),
         backgroundColor: appBarColor,
-      actions: appBarIcons(context)),
+      actions: <Widget> [appBarIconsInfo(context), appBarIconsSettings(context), appBarIconsProfile(context)]),
       body: new Center(
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,

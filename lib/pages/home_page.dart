@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage> {
       appBar: new AppBar(
           title: apptitle("Browsing Collection"),
           backgroundColor: appBarColor,
-          actions: appBarIcons(context)),
+          actions: <Widget> [appBarIconsInfo(context), appBarIconsSettings(context), appBarIconsProfile(context)]),
       body: ListView(
           padding: EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
           children: widgetList),

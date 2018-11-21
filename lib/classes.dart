@@ -21,3 +21,11 @@ class Topic {
 
   Topic(this.title, this.description, this.imageString, this.onCLick);
 }
+
+class FanItem {
+  String title;
+  String imageString;
+  int nr;
+
+  FanItem(this.title, this.imageString, this.nr);
+}
