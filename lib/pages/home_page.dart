@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:bc_app/styles.dart';
 import 'package:bc_app/layouts/build_topic_layout.dart';
 import 'package:bc_app/layouts/common_layouts.dart';
-import 'package:bc_app/pages/settings_page.dart';
 import 'package:bc_app/classes.dart';
-import 'package:bc_app/pages/info_page.dart';
+import 'package:bc_app/pages/biography_page.dart';
+import 'package:bc_app/pages/members_page.dart';
+import 'package:bc_app/pages/discography_page.dart';
+import 'package:bc_app/pages/chat_page.dart';
+import 'package:bc_app/pages/endorsement_page.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title, this.user}) : super(key: key);
@@ -16,13 +19,23 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<Topic> allTopics = [
+
+  @override
+  Widget build(BuildContext context) {
+    List<Widget> widgetList = [];
+
+    //ALL TOPICS
+     List<Topic> allTopics = [
     new Topic(
       "Biography",
       "Browsing Collection was founded 2008",
       "assets/images/biography_icon.png",
       (){ 
         print("Clicked biography");
+         Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => BiographyPage()),
+        );
       }),
     new Topic(
       "Discography",
@@ -30,6 +43,10 @@ class _HomePageState extends State<HomePage> {
       "assets/images/discography_icon.png",
       (){ 
         print("Clicked discography");
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => DiscographyPage()),
+        );
       }),
     new Topic(
       "Members",
@@ -37,6 +54,10 @@ class _HomePageState extends State<HomePage> {
       "assets/images/members_icon.png",
       (){ 
         print("Clicked members");
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => MembersPage()),
+        );
       }),
     new Topic(
       "Endorsement",
@@ -44,6 +65,10 @@ class _HomePageState extends State<HomePage> {
       "assets/images/endorsement_icon.png",
       (){ 
         print("Clicked endorsement");
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => EndorsementPage()),
+        );
       }),
     new Topic(
       "Contact",
@@ -51,12 +76,12 @@ class _HomePageState extends State<HomePage> {
       "assets/images/chat_icon.png",
       (){ 
         print("Clicked chat");
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => ChatPage()),
+        );
       }),
     ];
-
-  @override
-  Widget build(BuildContext context) {
-    List<Widget> widgetList = [];
 
     //PROFILE PIC TODO - Get from real user
     widgetList.add(Container(
