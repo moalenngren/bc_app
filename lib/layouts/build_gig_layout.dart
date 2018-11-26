@@ -1,19 +1,34 @@
 import 'package:bc_app/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:bc_app/pages/gig_page.dart';
 import 'package:intl/intl.dart';
+import 'package:bc_app/classes.dart';
+import 'package:bc_app/pages/gig_page.dart';
+import 'package:bc_app/pages/gig_info_page.dart';
 
-Container buildGigLayout(Gig gig) {
+Container buildGigLayout(Gig gig, BuildContext context) {
+
+//Locale myLocale = Localizations.localeOf(context);
+
   return Container(
     margin: EdgeInsets.only(top: 10.0),
     child:
   GestureDetector(
-    onTap: /*buildGigInfoPage(gig)*/ ()=> print(gig.venue.toString()) ,
+    onTap: (){
+      /*Navigate to ... GigInfoPage(gig)*/ 
+      Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => GigInfoPage(gig: gig)),
+        );
+      print(gig.venue.toString()); 
+    },
     child: Container(
       decoration: new BoxDecoration(
-                color: darkWhite,
-                borderRadius: new BorderRadius.all(Radius.circular(35.0))),
+                color: yellow,
+                borderRadius: new BorderRadius.all(Radius.circular(40.0))),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+        Row(
         children: [
           Container(
             margin: EdgeInsets.only(left: 25.0, top: 12.0, bottom: 12.0, right: 10.0),
@@ -32,10 +47,16 @@ Container buildGigLayout(Gig gig) {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
            children: <Widget>[
-            Text(gig.venue, style: TextStyle(/*fontFamily: "Quarca",*/ fontSize: 22.0), textAlign: TextAlign.left,),
-            Text(gig.city + ", " + gig.country, style: TextStyle(/*fontFamily: "Quarca",*/ fontSize: 27.0), textAlign: TextAlign.left,)
+            Text(gig.venue, style: TextStyle(fontFamily: "Quarca", fontSize: 22.0, fontWeight: FontWeight.bold), textAlign: TextAlign.left,),
+            Text(gig.city + ", " + /*myLocale.countryCode*/ gig.country + "jjjjjjjjjjjjjjjjjjjjjjj", style: TextStyle(fontFamily: "Quarca", fontSize: 27.0), textAlign: TextAlign.left,)
           ],
         )),
+        ]),
+        Container(
+          height: 40.0,
+          margin: EdgeInsets.only(right: 10.0),
+          child:
+        Image.asset("assets/images/arrow_right.png"))
         ]
       )
     )
@@ -43,37 +64,40 @@ Container buildGigLayout(Gig gig) {
   );
 }
 
-Container buildPastGigLayout(Gig gig) {
-  return Container(
+Row buildPastGigLayout(Gig gig) {
+  return /*Container(
       decoration: new BoxDecoration(
                 color: darkGrey,
-                borderRadius: new BorderRadius.all(Radius.circular(35.0))),
-      child: Row(
+                borderRadius: new BorderRadius.all(Radius.circular(35.0))), 
+      child:*/ Row(
         children: [
-          Container(
+          /*Container(
             margin: EdgeInsets.only(left: 25.0, top: 12.0, bottom: 12.0, right: 10.0),
             child: 
         Column(
-          children: <Widget>[
+          children: <Widget>[ */
             Text(DateFormat('MMM')
-                    .format(DateTime.parse(gig.date)).toUpperCase(), style: TextStyle(fontFamily: "Quarca", fontSize: 22.0),),
+                    .format(DateTime.parse(gig.date)) + " ", style: TextStyle(fontFamily: "Quarca", fontSize: 22.0, color: yellow),),
             Text(DateFormat('dd')
-                    .format(DateTime.parse(gig.date)), style: TextStyle(fontFamily: "Quarca", fontSize: 27.0, fontWeight: FontWeight.bold))
-          ],
-        ),),
+                    .format(DateTime.parse(gig.date)) + " : ", style: TextStyle(fontFamily: "Quarca", fontSize: 22.0, color: yellow)),
+         // ],
+       // ), 
+        /*
+        ),
          Container(
             margin: EdgeInsets.all(10.0),
             child: 
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-           children: <Widget>[
-            Text(gig.venue, style: TextStyle(/*fontFamily: "Quarca",*/ fontSize: 22.0, color: lightGrey), textAlign: TextAlign.left,),
-            Text(gig.city + ", " + gig.country, style: TextStyle(/*fontFamily: "Quarca",*/ fontSize: 27.0, color: lightGrey), textAlign: TextAlign.left,)
+           children: <Widget>[ */
+            Text(gig.venue + ", ", style: TextStyle(fontFamily: "Quarca", fontSize: 22.0, color: lightGrey), textAlign: TextAlign.left,),
+            Text(gig.city + ", " + gig.country.toUpperCase() + "hhhhhhhhhhhhhh", style: TextStyle(fontFamily: "Quarca", fontSize: 22.0, color: lightGrey), textAlign: TextAlign.left,)
           ],
-        )),
-        ]
-      )
-    );
+        );
+        //),
+       // ]
+    //  )
+   // );
 }
 
 

@@ -21,6 +21,14 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
+/*
+goToProfile() {
+  Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => MyProfilePage()),
+        );
+} */
+
   @override
   Widget build(BuildContext context) {
     List<Widget> widgetList = [];
@@ -105,11 +113,11 @@ class _HomePageState extends State<HomePage> {
         margin: EdgeInsets.only(bottom: 15.0),
         child:
       smallButton("Go Backstage", darkGrey, yellow, (){
-        print("Clicked my profile button"); /*
+        print("Clicked my profile button");
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => MyProfilePage()),
-        ); */
+        ); 
       }))
     );
 

@@ -75,11 +75,11 @@ class _LogInPageState extends State<LogInPage> {
             gig["venue"]["country"] != null ? gig["venue"]["country"] : "",
             gig["venue"]["latitude"] != null ? gig["venue"]["latitude"] : "",
             gig["venue"]["longitude"] != null ? gig["venue"]["longitude"] : "",
-            gig["offers"].length != 0 && gig["offers"] != [] && gig["offers"] != null ? gig["offers"][0]["type"] : "",
-            gig["offers"].length != 0 && gig["offers"] != [] && gig["offers"] != null ? gig["offers"][0]["url"] : "",
+            gig["offers"].length != 0 && gig["offers"] != [] && gig["offers"] != null && gig["offers"] != "" ? gig["offers"][0]["type"] : "Free entrance",
+            gig["offers"].length != 0 && gig["offers"] != [] && gig["offers"] != null && gig["offers"] != "" ? gig["offers"][0]["url"] : "No link found. Sorry, you'll have to Google it!",
             gig["datetime"] != null ? gig["datetime"] : "",
-            gig["description"] != null ? gig["description"] : "Live show with Browsing Collection",
-            gig["lineup"] != null ? gig["lineup"] : ["Browsing Collection"]); 
+            gig["description"] != null || gig["description"] != "" ? gig["description"] : "Live show with Browsing Collection",
+            gig["lineup"] != null || gig["lineup"].length != 0 ? gig["lineup"] : ["Browsing Collection"]); 
 
             if (isUpcoming) {
               allUpcomingGigInstances.add(newGig);

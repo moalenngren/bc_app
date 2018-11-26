@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:bc_app/styles.dart';
 import 'package:bc_app/layouts/build_gig_layout.dart';
 import 'package:bc_app/layouts/common_layouts.dart';
+import 'package:bc_app/classes.dart';
 
 class Gig {
   String venue;
@@ -48,7 +49,7 @@ class _GigPageState extends State<GigPage> {
 
       for (Gig gig in widget.upcomingGigList) {
         print("Building gig layouts");
-        widgetList.add(buildGigLayout(gig));
+        widgetList.add(buildGigLayout(gig, context));
       }
     } else {
       print("Upcoming gigs failed to load or are empty");

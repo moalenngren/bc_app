@@ -29,3 +29,4 @@ class FanItem {
 
   FanItem(this.title, this.imageString, this.nr);
 }
+

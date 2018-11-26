@@ -62,7 +62,7 @@ Container smallLine(
 GestureDetector smallButton(
     String text, Color textColor, Color backgroundColor, Function func) {
   return GestureDetector(
-      onTap: func(),
+      onTap: func,
       child: Align(
         alignment: Alignment.center,
         child: Container(
