@@ -8,6 +8,7 @@ import 'package:bc_app/pages/members_page.dart';
 import 'package:bc_app/pages/discography_page.dart';
 import 'package:bc_app/pages/chat_page.dart';
 import 'package:bc_app/pages/endorsement_page.dart';
+import 'package:bc_app/pages/my_profile_page.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title, this.user}) : super(key: key);
@@ -28,7 +29,7 @@ class _HomePageState extends State<HomePage> {
      List<Topic> allTopics = [
     new Topic(
       "Biography",
-      "Browsing Collection was founded 2008",
+      "Browsing Collection was founded 2008...",
       "assets/images/biography_icon.png",
       (){ 
         print("Clicked biography");
@@ -100,9 +101,16 @@ class _HomePageState extends State<HomePage> {
 
     //MY ACCOUNT BUTTON
     widgetList.add(
+      Container(
+        margin: EdgeInsets.only(bottom: 15.0),
+        child:
       smallButton("Go Backstage", darkGrey, yellow, (){
-        print("Clicked my profile button");
-      })
+        print("Clicked my profile button"); /*
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => MyProfilePage()),
+        ); */
+      }))
     );
 
     //SCROLL LIST WITH TOPICS

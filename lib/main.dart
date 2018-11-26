@@ -7,6 +7,7 @@ import 'package:bc_app/pages/shop_page.dart';
 import 'package:bc_app/pages/game_page.dart';
 import 'package:bc_app/pages/home_page.dart';
 import 'package:bc_app/classes.dart';
+import 'package:intl/intl.dart';
 
 void main() => runApp(new MyApp());
 
@@ -41,6 +42,7 @@ class LogInPage extends StatefulWidget {
 }
 
 class _LogInPageState extends State<LogInPage> {
+  
   bool loggedIn = true;
   int _currentBottomNavIndex = 2; 
   List<Gig> allUpcomingGigInstances = [];

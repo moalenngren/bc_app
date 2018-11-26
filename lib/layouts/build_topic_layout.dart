@@ -8,7 +8,7 @@ GestureDetector buildTopicLayout(Topic topic) {
    onTap: topic.onCLick,
    child:
  Container(
-   color: Colors.pink,
+   color: darkGrey,
    child: Column(
      children: <Widget>[
        //SMALL LINE
@@ -33,7 +33,10 @@ GestureDetector buildTopicLayout(Topic topic) {
                margin: EdgeInsets.only(top: 10.0),
                child:
             Text(topic.title, style: TextStyle(fontFamily: "Quarca", fontSize: 27.0, color: yellow), textAlign: TextAlign.left,)),
-            Text(topic.description, style: TextStyle(fontFamily: "Quarca", fontSize: 22.0, color: lightGrey), textAlign: TextAlign.left,)
+            Container(
+               margin: EdgeInsets.only(bottom: 10.0),
+               child:
+            Text(topic.description, style: TextStyle(fontFamily: "Quarca", fontSize: 22.0, color: lightGrey), textAlign: TextAlign.left,))
           ],
         )
          )
